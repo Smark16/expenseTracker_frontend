@@ -165,12 +165,12 @@ setSelectedCurrency(value)
       </ul>
 
       <ul>
-        <li>
+       {/* <li>
           <select onChange={changeCurrency}>
             <option value="USD">USD</option>
             <option value="USH">USH</option>
           </select>
-        </li>
+        </li>*/}
       </ul>
 </div>
       

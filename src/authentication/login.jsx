@@ -17,9 +17,11 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
  const [user, setUser] = useState({username:"", password:""})
  const [errMsg, setErrMsg] = useState('')
+ const [loading, setLoading] = useState(false)
 
  const handleSubmit =(e)=>{
 e.preventDefault()
+setLoading(true)
 const formData = new FormData()
 formData.append("username", user.username)
 formData.append("password", user.password)
@@ -31,6 +33,7 @@ axios.post(url, formData)
  if(response.data.bool === false){
   setErrMsg(response.data.msg)
   window.location.href = '/login'
+  setLoading(false)
  }
  if(response.data.bool === true){
   localStorage.setItem('user_login', true)
@@ -115,7 +118,13 @@ setUser({...user, [name]:value})
           />
       </div>
          
-         <Button className='mt-3' variant='contained' type='submit' onClick={handleSubmit}>LOGIN</Button>
+         <Button className='mt-3' variant='contained' type='submit' onClick={handleSubmit}>
+          {loading ? (<>
+          LOADING..
+          </>) : (<>
+          LOGIN
+          </>)}
+          </Button>
         </form>
 
         <p className='text-center w-100'>No account? <Link to='/signup'>Create one</Link></p>
