@@ -263,7 +263,7 @@ required/>
                     <>
                       <li className='d-flex justify-content-between' key={id}>
             <div className='d-flex item'>
-            <img src={`https://expensetracker-backend-49vp.onrender.com/${image}`} alt='image' className='cat_img'></img>
+            <img src={`https://expensetracker-backend-49vp.onrender.com${image}`} alt='image' className='cat_img'></img>
         <div>
             <h6>{item}</h6>
             <span>{date.toDateString()}</span>
