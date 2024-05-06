@@ -3,7 +3,7 @@ import Transactions from './transactions';
 import '../App.css';
 import useFetch from './customhook';
 
-const catsUrl = 'http://127.0.0.1:8000/expenseApi/'
+const catsUrl = 'https://expensetracker-backend-49vp.onrender.com/expenseApi/'
 
 function Accounts({newAmount, income}) {
   const [account, setAccount] = useState('');
