@@ -113,9 +113,9 @@ setSelectedCurrency(value)
 </div>
 
 <div className="row_cats">
-<h2>Categories</h2>
+<h2 className='text-center'>Categories</h2>
       <ul>
-        {loading ? (<div class="loader"></div>) : (
+        {loading ? (<div class="cat_loader"></div>) : (
           <>
            {categories.slice(0, 5).map((categorie) => {
           const { name,image, id } = categorie;
