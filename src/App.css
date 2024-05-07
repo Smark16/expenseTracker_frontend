@@ -430,11 +430,10 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   .th{
     position: absolute;
     width: 100%;
-    margin-top: -230px;
+    margin-top: -150px;
   }
   .item{
     align-items: center;
-    margin-left: 36%;
     width: 50px;
   }
 }
