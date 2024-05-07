@@ -144,7 +144,7 @@ setSelectedCurrency(value)
     return (
       <>
       <li key={id} className='li_cat'>
-      <img src={`http://127.0.0.1:8000${image}`} alt='image' className='cat_img'></img>
+      <img src={`https://expensetracker-backend-49vp.onrender.com${image}`} alt='image' className='cat_img'></img>
        <span>{name}</span>
         </li>
       </>
