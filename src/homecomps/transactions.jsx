@@ -253,7 +253,7 @@ required/>
 <div>
     {transactions.length === 0 ? (<>
         <h4 className='text-center text-white bg-primary p-2 mt-3'>No Transactions</h4>
-      <img src={noTrans} alt='notrans' className='text-cente'></img>
+      <img src={noTrans} alt='notrans' className='text-center notrans'></img>
     </>
 ) : (
         <ul className='items'>

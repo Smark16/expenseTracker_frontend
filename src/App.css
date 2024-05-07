@@ -374,6 +374,14 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   } 
   .row_cats{
     flex: 1;
+    font-size: 15px;
+    margin-top: -140px;
+    margin-left: 30px;
+  }
+  .accounts{
+    font-size: 15px;
+    margin-left: -10px;
+    display: none;
   }
   .items{
     padding: 5px;
@@ -409,7 +417,7 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   .th{
     position: absolute;
     width: 100%;
-    margin-top: -120px;
+    margin-top: -230px;
   }
   .item{
     align-items: center;
@@ -421,7 +429,7 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   .tr form{
     width: 300px;
   }
-  .row_transit img{
-  margin-left: -100px;
+  .notrans{
+  width: 300px;
 }
 }
