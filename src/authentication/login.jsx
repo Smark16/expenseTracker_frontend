@@ -12,7 +12,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import axios from 'axios';
 import '../App.css'
-const url = 'http://127.0.0.1:8000/expenseApi/user_login'
+const url = 'https://expensetracker-backend-49vp.onrender.com/expenseApi/user_login'
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
  const [user, setUser] = useState({username:"", password:""})

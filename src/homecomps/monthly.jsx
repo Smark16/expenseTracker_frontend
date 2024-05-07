@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import '../App.css'
 import useFetch from './customhook';
 
-const url = 'http://127.0.0.1:8000/expenseApi/'
+const url = 'https://expensetracker-backend-49vp.onrender.com/expenseApi/'
 function Monthly({newAmount, expensesByCategory, monthly}) {
 const [currentMonth, setCurrentMonth] = useState('')
 const {loading} = useFetch(url)

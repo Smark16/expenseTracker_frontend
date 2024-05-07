@@ -5,12 +5,12 @@ import noTrans from '../images/notrans.jpg'
 import { userContext } from '../context';
 import '../App.css'
 import axios from 'axios'
-const PostExpenseUrl = 'http://127.0.0.1:8000/expenseApi/post_expense'
-const catsUrl = 'http://127.0.0.1:8000/expenseApi/'
+const PostExpenseUrl = 'https://expensetracker-backend-49vp.onrender.com/expenseApi/post_expense'
+const catsUrl = 'https://expensetracker-backend-49vp.onrender.com/expenseApi/'
 
 function Transactions({selectedCurrency}) {
     const {user_id} = useContext(userContext)
-    const expensesURL = `http://127.0.0.1:8000/expenseApi/user_expense/${user_id}`
+    const expensesURL = `https://expensetracker-backend-49vp.onrender.com/expenseApi/user_expense/${user_id}`
     const [form, setForm] = useState(false)
     const [enteredItems, setEnteredItems] = useState({item:"", amount:"", category:"Choose Category"})
     const [newAmount, setNewAmount] = useState(0)
@@ -51,7 +51,7 @@ const handleForm = async (e) => {
     if (categoryObject.image && typeof categoryObject.image === 'string') {
         try {
             // Download the image from the URL
-            const imageResponse = await axios.get(`http://127.0.0.1:8000${categoryObject.image}`, { responseType: 'blob' });
+            const imageResponse = await axios.get(`https://expensetracker-backend-49vp.onrender.com${categoryObject.image}`, { responseType: 'blob' });
             const imageBlob = new Blob([imageResponse.data], { type: imageResponse.headers['content-type'] });
             const imageFile = new File([imageBlob], 'image.jpg'); 
 
@@ -118,7 +118,7 @@ const convertCurrency = (amount, rate) => {
 
 const handleDelete = async (id)=>{
  try{
-  await axios.delete(`http://127.0.0.1:8000/expenseApi/delete/${id}`)
+  await axios.delete(`https://expensetracker-backend-49vp.onrender.com/expenseApi/delete/${id}`)
         setTransactions(prevTransactions => {
             const updatedTransactions = prevTransactions.filter(transaction => transaction.id !== id);
             const amount = updatedTransactions.reduce((total, transaction) => {
@@ -263,7 +263,7 @@ required/>
                     <>
                       <li className='d-flex justify-content-between' key={id}>
             <div className='d-flex item'>
-            <img src={`http://127.0.0.1:8000/${image}`} alt='image' className='cat_img'></img>
+            <img src={`https://expensetracker-backend-49vp.onrender.com${image}`} alt='image' className='cat_img'></img>
         <div>
             <h6>{item}</h6>
             <span>{date.toDateString()}</span>

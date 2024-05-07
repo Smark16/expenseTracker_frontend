@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const url = 'http://127.0.0.1:8000/expenseApi/user_register'
+const url = 'https://expensetracker-backend-49vp.onrender.com/expenseApi/user_register'
 function Signup() {
 const [user, setUser] = useState({first:"", last:"", username:"", email:"", password:"", mobile:""})
 const [formMsg, setFormMsg] = useState('')
